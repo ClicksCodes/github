@@ -1,0 +1,20 @@
+{
+  "name": "workflow-reviews-required",
+  "version": "1.0.0",
+  "description": "Require reviews on pull requests (similar to some features in pullapprove)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClicksMinutePer/workflow-reviews-required.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClicksMinutePer/workflow-reviews-required/issues"
+  },
+  "homepage": "https://github.com/ClicksMinutePer/workflow-reviews-required#readme"
+}
