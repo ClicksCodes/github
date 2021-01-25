@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/ClicksMinutePer/workflow-reviews-required/issues"
   },
-  "homepage": "https://github.com/ClicksMinutePer/workflow-reviews-required#readme"
+  "homepage": "https://github.com/ClicksMinutePer/workflow-reviews-required#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
+  }
 }
