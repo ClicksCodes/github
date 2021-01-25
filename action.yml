@@ -1,13 +1,23 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'reviews-required'
+description: 'Require codeowner reviews without requiring reviews on any other files. It is suggested to have this action run on pull_request_target'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
+	required_count:
+		description: 'How many reviews to require from codeowners. Must be a non-negative integer, defaults to 0. If there are less codeowners than this amount, that number will be used instead'
+		required: false
+		default: 0
+	required_percentage:
+		description: 'What percentage of codeowners need to review. Must be a number between 0 and 1 (inclusive), defaults to 0. If both this and required are specified, the larger will be used on a per-pull-request basis'
+		required: false
+		default: 0
+	request_count:
+		description: 'How many reviewers to request for review at once. Must be a non-negative integer, defaults to 0. 0 requests all codeowners at once.'
+		required: false
+		default: 0
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+	success:
+		description: 'Did the action succeed?'
+	remaining:
+		description: 'How many reviews are needed before the action will succeed.'
 runs:
-  using: 'node12'
-  main: 'index.js'
+	using: 'node12'
+	main: 'index.js'
